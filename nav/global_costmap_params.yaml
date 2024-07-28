@@ -1,0 +1,17 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_link
+  static_map: true
+  update_frequency: 1.0
+  publish_frequency: 1.0
+  transform_tolerance: 1.0 # if timeout occurs in running log, set this value higher
+
+recovery_behaviors:
+  - name: 'rotate_recovery'
+    type: 'rotate_recovery/RotateRecovery'
+  - name: 'reset_recovery'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+  
+reset_recovery:
+  reset_distance: 1.5
+  layer_names: ["obstacle_layer"] # don't delete this attribute

@@ -1,0 +1,11 @@
+local_costmap:
+  global_frame: odom
+  robot_base_frame: base_link
+  static_map: false
+  rolling_window: true
+  width: 4.0
+  height: 4.0
+  update_frequency: 20.0 # our hokuyo lidar scans 40 time per second
+  publish_frequency: 20.0
+  transform_tolerance: 1.0
+  # resolution: 0.05
